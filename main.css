@@ -4,9 +4,14 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 0.8rem;
+}
+
 body {
     height: 100vh;
     background-image: radial-gradient(circle at top left, rgb(0, 43, 99), rgb(0, 21, 39), rgb(0, 11, 17));
+    overflow: hidden;
 }
 
 #main {
@@ -29,25 +34,29 @@ body {
     justify-content: center;
     position: absolute;
     transform-origin: center;
+    border-radius: 50%;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
 .celestial-body-shared {
     border-radius: 50%;
+    transform: translateY(-50%);
 }
 
 #star {
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
-    background-color: orangered;
-    box-shadow: 0 0 50px orangered;
+    background-color: #ff4500;
+    box-shadow: 0 0 50px #ff4500;
 }
 
 /* Mercury */
 #mercury-container {
-    height: 14rem;
+    height: 12rem;
+    width: 12rem;
+    border: 1px solid #8d705b;
     animation-name: rotation-animation;
     animation-duration: 5s;
 }
@@ -55,12 +64,14 @@ body {
 #mercury {
     width: 1.5rem;
     height: 1.5rem;
-    background-color: rgb(203,162,132);
+    background-color: #cba284;
 }
 
 /* Venus */
 #venus-container {
-    height: 20rem;
+    height: 17rem;
+    width: 17rem;
+    border: 1px solid #72612f;
     animation-name: rotation-animation;
     animation-duration: 7s;
 }
@@ -68,12 +79,14 @@ body {
 #venus {
     width: 2.2rem;
     height: 2.2rem;
-    background-color: rgb(204,174,84);
+    background-color: #ccae54;
 }
 
 /* Earth */
 #earth-container {
-    height: 27rem;
+    height: 24rem;
+    width: 24rem;
+    border: 1px solid #002b6b;
     animation-name: rotation-animation;
     animation-duration: 10s;
 }
@@ -84,11 +97,13 @@ body {
     align-items: center;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: rgb(0, 71, 177);
+    background-color: #0047b1;
 }
 
 #moon-container {
     height: 4rem;
+    width: 4rem;
+    border: 1px solid #3d3d3d;
     animation-name: rotation-animation;
     animation-duration: 3s;
 }
@@ -96,9 +111,83 @@ body {
 #moon {
     width: 0.5rem;
     height: 0.5rem;
-    background-color: gray;
+    background-color: #808080;
 }
 
+/* Mars */
+#mars-container {
+    height: 31rem;
+    width: 31rem;
+    border: 1px solid #944f3a;
+    animation-name: rotation-animation;
+    animation-duration: 12s;
+}
+
+#mars {
+    width: 2.1rem;
+    height: 2.1rem;
+    background-color: #f08361;
+}
+
+/* Juptier */
+#jupiter-container {
+    height: 38rem;
+    width: 38rem;
+    border: 1px solid #643527;
+    animation-name: rotation-animation;
+    animation-duration: 20s;
+}
+
+#jupiter {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #9b533d;
+}
+
+/* Saturn */
+#saturn-container {
+    height: 46rem;
+    width: 46rem;
+    border: 1px solid #77724e;
+    animation-name: rotation-animation;
+    animation-duration: 25s;
+}
+
+#saturn {
+    width: 3rem;
+    height: 3rem;
+    background-color: #dad292;
+}
+
+/* Uranus */
+#uranus-container {
+    height: 53rem;
+    width: 53rem;
+    border: 1px solid #567777;
+    animation-name: rotation-animation;
+    animation-duration: 30s;
+}
+
+#uranus {
+    width: 3rem;
+    height: 3rem;
+    background-color: #b1f3f2;
+}
+
+/* Neptune */
+#neptune-container {
+    height: 60rem;
+    width: 60rem;
+    border: 1px solid #31527a;
+    animation-name: rotation-animation;
+    animation-duration: 35s;
+}
+
+#neptune {
+    width: 3rem;
+    height: 3rem;
+    background-color: #5891d6;
+}
 
 @keyframes rotation-animation {
     from {
