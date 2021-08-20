@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: radial-gradient(circle at top left, rgb(0, 43, 99), rgb(0, 21, 39), rgb(0, 11, 17));
+}
+
+#main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#solar-system-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-shared {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    transform-origin: center;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.celestial-body-shared {
+    border-radius: 50%;
+}
+
+#star {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: orangered;
+    box-shadow: 0 0 50px orangered;
+}
+
+/* Mercury */
+#mercury-container {
+    height: 14rem;
+    animation-name: rotation-animation;
+    animation-duration: 5s;
+}
+
+#mercury {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgb(203,162,132);
+}
+
+/* Venus */
+#venus-container {
+    height: 20rem;
+    animation-name: rotation-animation;
+    animation-duration: 7s;
+}
+
+#venus {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: rgb(204,174,84);
+}
+
+/* Earth */
+#earth-container {
+    height: 27rem;
+    animation-name: rotation-animation;
+    animation-duration: 10s;
+}
+
+#earth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgb(0, 71, 177);
+}
+
+#moon-container {
+    height: 4rem;
+    animation-name: rotation-animation;
+    animation-duration: 3s;
+}
+
+#moon {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: gray;
+}
+
+
+@keyframes rotation-animation {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
