@@ -6,12 +6,14 @@
 
 html {
     font-size: 0.65rem;
+    transform-style: preserve-3d;
 }
 
 body {
     height: 100vh;
     background-image: radial-gradient(circle at top left, rgb(0, 43, 99), rgb(0, 21, 39), rgb(0, 11, 17));
     overflow: hidden;
+    transform-style: preserve-3d;
 }
 
 #main {
@@ -22,6 +24,8 @@ body {
 }
 
 #solar-system-container {
+    /* transform: rotateX(80deg); */
+    transform-style: preserve-3d;
     width: 100%;
     height: 100%;
     display: flex;
@@ -30,11 +34,13 @@ body {
 }
 
 .container-shared {
+    transform-style: preserve-3d;
     display: flex;
     justify-content: center;
     position: absolute;
     transform-origin: center;
     border-radius: 50%;
+    animation-name: rotation-animation;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -42,9 +48,14 @@ body {
 .celestial-body-shared {
     border-radius: 50%;
     transform: translateY(-50%);
+    overflow: visible;
+    /* animation-name: planet-correction-3d;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; */
 }
 
 #star {
+    /* transform: rotateX(-80deg); */
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
@@ -57,7 +68,6 @@ body {
     height: 12rem;
     width: 12rem;
     border: 1px solid #8d705b;
-    animation-name: rotation-animation;
     animation-duration: 5s;
 }
 
@@ -65,6 +75,7 @@ body {
     width: 1.5rem;
     height: 1.5rem;
     background-color: #cba284;
+    animation-duration: 5s;
 }
 
 /* Venus */
@@ -72,7 +83,6 @@ body {
     height: 17rem;
     width: 17rem;
     border: 1px solid #72612f;
-    animation-name: rotation-animation;
     animation-duration: 7s;
 }
 
@@ -80,6 +90,7 @@ body {
     width: 2.2rem;
     height: 2.2rem;
     background-color: #ccae54;
+    animation-duration: 7s;
 }
 
 /* Earth */
@@ -87,7 +98,6 @@ body {
     height: 24rem;
     width: 24rem;
     border: 1px solid #002b6b;
-    animation-name: rotation-animation;
     animation-duration: 10s;
 }
 
@@ -98,13 +108,13 @@ body {
     width: 2.5rem;
     height: 2.5rem;
     background-color: #0047b1;
+    animation-duration: 10s;
 }
 
 #moon-container {
     height: 4rem;
     width: 4rem;
     border: 1px solid #3d3d3d;
-    animation-name: rotation-animation;
     animation-duration: 3s;
 }
 
@@ -119,7 +129,6 @@ body {
     height: 31rem;
     width: 31rem;
     border: 1px solid #944f3a;
-    animation-name: rotation-animation;
     animation-duration: 12s;
 }
 
@@ -127,6 +136,7 @@ body {
     width: 2.1rem;
     height: 2.1rem;
     background-color: #f08361;
+    animation-duration: 12s;
 }
 
 /* Juptier */
@@ -134,7 +144,6 @@ body {
     height: 38rem;
     width: 38rem;
     border: 1px solid #643527;
-    animation-name: rotation-animation;
     animation-duration: 20s;
 }
 
@@ -142,6 +151,7 @@ body {
     width: 3.5rem;
     height: 3.5rem;
     background-color: #9b533d;
+    animation-duration: 20s;
 }
 
 /* Saturn */
@@ -149,7 +159,6 @@ body {
     height: 46rem;
     width: 46rem;
     border: 1px solid #77724e;
-    animation-name: rotation-animation;
     animation-duration: 25s;
 }
 
@@ -157,6 +166,7 @@ body {
     width: 3rem;
     height: 3rem;
     background-color: #dad292;
+    animation-duration: 25s;
 }
 
 /* Uranus */
@@ -164,7 +174,6 @@ body {
     height: 53rem;
     width: 53rem;
     border: 1px solid #567777;
-    animation-name: rotation-animation;
     animation-duration: 30s;
 }
 
@@ -172,6 +181,7 @@ body {
     width: 3rem;
     height: 3rem;
     background-color: #b1f3f2;
+    animation-duration: 30s;
 }
 
 /* Neptune */
@@ -179,7 +189,6 @@ body {
     height: 60rem;
     width: 60rem;
     border: 1px solid #31527a;
-    animation-name: rotation-animation;
     animation-duration: 35s;
 }
 
@@ -187,13 +196,41 @@ body {
     width: 3rem;
     height: 3rem;
     background-color: #5891d6;
+    animation-duration: 35s;
 }
 
 @keyframes rotation-animation {
-    from {
+    0% {
         transform: rotateZ(0deg);
     }
-    to {
+    25% {
+        transform: rotateZ(90deg);
+    }
+    50% {
+        transform: rotateZ(180deg);
+    }
+    75% {
+        transform: rotateZ(270deg);
+    }
+    100% {
         transform: rotateZ(360deg);
     }
 }
+
+/* @keyframes planet-correction-3d {
+    0% {
+        transform: rotateX(-80deg) rotateY(0);
+    }
+    25% {
+        transform: rotateX(-80deg) rotateY(90deg);
+    }
+    50% {
+        transform:  rotateX(-80deg) rotateY(180deg);
+    }
+    75% {
+        transform: rotateX(-80deg) rotateY(270deg);
+    }
+    100% {
+        transform: rotateX(-80deg) rotateY(360deg);
+    }
+} */
