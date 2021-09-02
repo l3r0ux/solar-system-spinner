@@ -90,13 +90,13 @@ body {
     height: 12rem;
     width: 12rem;
     border: 1px solid #ffffff27;
-    animation-duration: 5s;
+    animation-duration: 8s;
 }
 
 #mercury {
     width: var(--mercury-size);
     height: var(--mercury-size);
-    animation-duration: 5s;
+    animation-duration: 8s;
 }
 
 /* Venus */
@@ -104,13 +104,13 @@ body {
     height: 17rem;
     width: 17rem;
     border: 1px solid #ffffff27;
-    animation-duration: 7s;
+    animation-duration: 11s;
 }
 
 #venus {
     width: var(--venus-size);
     height: var(--venus-size);
-    animation-duration: 7s;
+    animation-duration: 11s;
 }
 
 /* Earth */
@@ -118,7 +118,7 @@ body {
     height: 24rem;
     width: 24rem;
     border: 1px solid #ffffff27;
-    animation-duration: 10s;
+    animation-duration: 14s;
 }
 
 #earth {
@@ -127,14 +127,14 @@ body {
     align-items: center;
     width: var(--earth-size);
     height: var(--earth-size);
-    animation-duration: 10s;
+    animation-duration: 14s;
 }
 
 #moon-container {
     height: 4rem;
     width: 4rem;
     border: 1px solid #ffffff27;
-    animation-duration: 3s;
+    animation-duration: 5s;
 }
 
 #moon {
@@ -148,13 +148,13 @@ body {
     height: 31rem;
     width: 31rem;
     border: 1px solid #ffffff27;
-    animation-duration: 12s;
+    animation-duration: 16s;
 }
 
 #mars {
     width: var(--mars-size);
     height: var(--mars-size);
-    animation-duration: 12s;
+    animation-duration: 16s;
 }
 
 /* Juptier */
@@ -190,13 +190,13 @@ body {
     height: 53rem;
     width: 53rem;
     border: 1px solid #ffffff27;
-    animation-duration: 30s;
+    animation-duration: 34s;
 }
 
 #uranus {
     width: var(--uranus-size);
     height: var(--uranus-size);
-    animation-duration: 30s;
+    animation-duration: 34s;
 }
 
 /* Neptune */
@@ -204,13 +204,13 @@ body {
     height: 60rem;
     width: 60rem;
     border: 1px solid #ffffff27;
-    animation-duration: 35s;
+    animation-duration: 45s;
 }
 
 #neptune {
     width: var(--neptune-size);
     height: var(--neptune-size);
-    animation-duration: 35s;
+    animation-duration: 45s;
 }
 
 @keyframes rotation-animation {
