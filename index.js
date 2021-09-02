@@ -1,4 +1,5 @@
 const container = document.getElementById('background-stars');
+
 const colors = ['#97e1ff', '#ffae80', '#6171ff'];
 const shadows = ['#c0edff', '#ffd4bb', '#c0c1ff'];
 
