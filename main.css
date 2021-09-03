@@ -19,6 +19,7 @@
 
 :root {
     --zoom: ;
+    --playState: ;
 
     --mercury-size: 1.5rem;
     --venus-size: 2.2rem;
@@ -31,6 +32,45 @@
     --neptune-size: 3rem;
 }
 
+#playback-controls {
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    right: 6rem;
+    filter: brightness(0) invert(1);
+}
+
+#play-button {
+    transform: translateX(0);
+    transition: all 200ms ease;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+    width: 5rem;
+    height: 5rem;
+    visibility: visible;
+}
+
+#pause-button {
+    transform: translateX(0);
+    transition: all 200ms ease;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+    width: 5rem;
+    height: 5rem;
+    visibility: visible;
+}
+
+.hide {
+    z-index: 2 !important;
+    opacity: 0 !important;
+    transform: translateX(5rem) !important;
+    visibility: hidden !important;
+}
+
 .zoom-slider-container {
     position: absolute;
     z-index: 100;
@@ -41,6 +81,7 @@
     height: 2.4rem;
     border-radius: 2.4rem;  
     background: #ffffff4d;
+    box-shadow: 0 0 15px #ffffff4d;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,13 +127,20 @@
     filter: brightness(0) invert(1);
 }
 
+@font-face {
+    font-family: "Agelast";
+    src: url("assets/fonts/Agelast.otf");
+}
+
 body {
     height: 100vh;
     background-image: radial-gradient(circle at top left, rgb(0, 43, 99), rgb(0, 21, 39), rgb(0, 11, 17));
     overflow: hidden;
+    font-family: Agelast;
 }
 
 #main {
+    transform: perspective(1000px);
     height: 100%;
     display: flex;
     justify-content: center;
@@ -120,22 +168,52 @@ body {
 
 .container-shared {
     transform-style: preserve-3d;
+    position: absolute;
     display: flex;
     justify-content: center;
-    position: absolute;
     transform-origin: center;
     border-radius: 50%;
     animation-name: rotation-animation;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    animation-play-state: var(--playState);
+}
+
+#planet-names {
+    transition: all ease 500ms;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.5rem;
+    height: 3rem;
+    background-color: #ffffff4d;
+    box-shadow: 0 0 15px #ffffff4d;
+    border-radius: 2rem;
+}
+
+#planet-names div {
+    cursor: pointer;
+    transition: all ease 200ms;
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+#planet-names div:hover {
+    transform: translateY(-0.2rem);
+    filter: drop-shadow(0 0 5px white);
 }
 
 .celestial-body-shared {
     border-radius: 50%;
-    overflow: visible;
     animation-name: planet-correction-3d;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    animation-play-state: var(--playState);
 }
 
 #star {
@@ -156,6 +234,8 @@ body {
 }
 
 #mercury {
+    position: absolute;
+    z-index: 10;
     width: var(--mercury-size);
     height: var(--mercury-size);
     animation-duration: 8s;

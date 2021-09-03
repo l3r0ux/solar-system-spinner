@@ -15,12 +15,30 @@
 
         <div class="zoom-slider-container">
             <div id="zoom-in" class="zoom-button">
-                <img class="zoom-icon" src="assets/images/zoom-out.png">
+                <img draggable="false" class="zoom-icon" src="assets/images/zoom-out.png">
             </div>
             <input id="zoom-slider" type="range" min="0" max="6" step="0.1" value="1.2">
             <div id="zoom-out" class="zoom-button">
-                <img class="zoom-icon" src="assets/images/zoom-in.png">
+                <img draggable="false" class="zoom-icon" src="assets/images/zoom-in.png">
             </div>
+        </div>
+
+        <div id="playback-controls">
+            <img src="assets/images/play.png" alt="play-button" id="play-button" class="hide">
+            <img src="assets/images/pause.png" alt="pause-button" id="pause-button">
+        </div>
+
+        <div id="planet-names">
+            <div>Sun</div>
+            <div>Venus</div>
+            <div>Mercury</div>
+            <div>Earth</div>
+            <div>Luna</div>
+            <div>Mars</div>
+            <div>Jupiter</div>
+            <div>Saturn</div>
+            <div>Uranus</div>
+            <div>Neptune</div>
         </div>
         
         <!-- Append stars here -->
@@ -30,41 +48,41 @@
 
         <section id="solar-system">
             <div id="solar-system-container">
-                <div id="neptune-container" class="container-shared">
-                    <img src="assets/images/neptune.png" alt="neptune" id="neptune" class="celestial-body-shared">
+                <img draggable="false" src="assets/images/sun.png" alt="star" id="star">
+                <div id="mercury-container" class="container-shared">
+                    <img draggable="false" src="assets/images/mercury.png" alt="mercury" id="mercury" class="celestial-body-shared">
                 </div>
-                <div id="uranus-container" class="container-shared">
-                    <img src="assets/images/uranus.png" alt="uranus" id="uranus" class="celestial-body-shared">
-                </div>
-                <div id="saturn-container" class="container-shared">
-                    <img src="assets/images/saturn.png" alt="saturn" id="saturn" class="celestial-body-shared">
-                </div>
-                <div id="jupiter-container" class="container-shared">
-                    <img src="assets/images/jupiter.png" alt="jupiter" id="jupiter" class="celestial-body-shared">
-                </div>
-                <div id="mars-container" class="container-shared">
-                    <img src="assets/images/mars.png" alt="mars" id="mars" class="celestial-body-shared">
+                <div id="venus-container" class="container-shared">
+                    <img draggable="false" src="assets/images/venus.png" alt="venus" id="venus" class="celestial-body-shared">
                 </div>
                 <div id="earth-container" class="container-shared">
                     <div class="celestial-body-shared" id="earth">
-                        <img src="assets/images/earth.png" alt="earth" id="earth">
+                        <img draggable="false" src="assets/images/earth.png" alt="earth" id="earth">
                         <div id="moon-container" class="container-shared">
-                            <img src="assets/images/moon.png" alt="moon" id="moon" class="celestial-body-shared">
+                            <img draggable="false" src="assets/images/moon.png" alt="moon" id="moon" class="celestial-body-shared">
                         </div>
                     </div>
                 </div>
-                <div id="venus-container" class="container-shared">
-                    <img src="assets/images/venus.png" alt="venus" id="venus" class="celestial-body-shared">
+                <div id="mars-container" class="container-shared">
+                    <img draggable="false" src="assets/images/mars.png" alt="mars" id="mars" class="celestial-body-shared">
                 </div>
-                <div id="mercury-container" class="container-shared">
-                    <img src="assets/images/mercury.png" alt="mercury" id="mercury" class="celestial-body-shared">
+                <div id="jupiter-container" class="container-shared">
+                    <img draggable="false" src="assets/images/jupiter.png" alt="jupiter" id="jupiter" class="celestial-body-shared">
                 </div>
-                <img src="assets/images/sun.png" alt="star" id="star">
+                <div id="saturn-container" class="container-shared">
+                    <img draggable="false" src="assets/images/saturn.png" alt="saturn" id="saturn" class="celestial-body-shared">
+                </div>
+                <div id="uranus-container" class="container-shared">
+                    <img draggable="false" src="assets/images/uranus.png" alt="uranus" id="uranus" class="celestial-body-shared">
+                </div>
+                <div id="neptune-container" class="container-shared">
+                    <img draggable="false" src="assets/images/neptune.png" alt="neptune" id="neptune" class="celestial-body-shared">
+                </div>
             </div>
         </section>
         
     </main>
-
+    
 </body>
 
 </html>
