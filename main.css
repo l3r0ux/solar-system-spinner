@@ -31,20 +31,9 @@
     --neptune-size: 3rem;
 }
 
-#controls-overlay {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    width: 100vw;
-    height: 100vh;
-    max-width: 120rem;
-}
-
 .zoom-slider-container {
     position: absolute;
-    z-index: 1;
+    z-index: 100;
     top: 12rem;
     left: -10rem;
     transform: rotateZ(-90deg);
@@ -111,8 +100,12 @@ body {
 }
 
 #solar-system {
+    position: fixed;
+    user-select: none;
     transition: transform 200ms ease;
     transform: scale(var(--zoom));
+    cursor: grab;
+    z-index: 1;
 }
 
 #solar-system-container {
