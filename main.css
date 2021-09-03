@@ -158,6 +158,8 @@ body {
 
 #solar-system {
     position: fixed;
+    width: fit-content;
+    height: fit-content;
     user-select: none;
     transition: transform 200ms ease;
     transform: scale(var(--zoom));
