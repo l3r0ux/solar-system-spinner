@@ -18,6 +18,8 @@
 }
 
 :root {
+    --zoom: ;
+
     --mercury-size: 1.5rem;
     --venus-size: 2.2rem;
     --earth-size: 2.5rem;
@@ -29,8 +31,21 @@
     --neptune-size: 3rem;
 }
 
-html {
-    font-size: 1.3rem;
+#zoom-slider {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 2rem;
+    z-index: 1;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20rem;
+    height: 15px;
+    border-radius: 5px;  
+    background: #ff510079;
+    outline: none;
+    overflow: visible;
 }
 
 body {
@@ -44,6 +59,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#solar-system {
+    transition: transform 200ms ease;
+    transform: scale(var(--zoom));
 }
 
 #solar-system-container {

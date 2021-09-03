@@ -1,4 +1,6 @@
 const container = document.getElementById('background-stars');
+const zoomSlider = document.getElementById('zoom-slider');
+const root = document.querySelector(':root');
 
 const colors = ['#97e1ff', '#ffae80', '#6171ff'];
 const shadows = ['#c0edff', '#ffd4bb', '#c0c1ff'];
@@ -26,3 +28,14 @@ const makeStars = (count) => {
 }
 
 makeStars(1000);
+
+// Default zoom
+let zoom = zoomSlider.value;
+
+root.style.setProperty('--zoom', zoom);
+
+zoomSlider.addEventListener('input', (e) => {
+    console.log(e.target.value)
+    zoom = e.target.value;
+    root.style.setProperty('--zoom', zoom);
+})
