@@ -35,7 +35,6 @@ let zoom = zoomSlider.value;
 root.style.setProperty('--zoom', zoom);
 
 zoomSlider.addEventListener('input', (e) => {
-    console.log(e.target.value)
     zoom = e.target.value;
     root.style.setProperty('--zoom', zoom);
 })

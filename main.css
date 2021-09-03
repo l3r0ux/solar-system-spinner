@@ -31,21 +31,70 @@
     --neptune-size: 3rem;
 }
 
-#zoom-slider {
+#controls-overlay {
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
-    margin-bottom: 2rem;
     z-index: 1;
-    appearance: none;
-    -webkit-appearance: none;
+    width: 100vw;
+    height: 100vh;
+    max-width: 120rem;
+}
+
+.zoom-slider-container {
+    position: absolute;
+    z-index: 1;
+    top: 12rem;
+    left: -10rem;
+    transform: rotateZ(-90deg);
+    width: fit-content;
+    height: 2.4rem;
+    border-radius: 2.4rem;  
+    background: #ffffff4d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#zoom-slider {
+    -webkit-appearance: none !important;
+    border-radius: 1rem;
     width: 20rem;
-    height: 15px;
-    border-radius: 5px;  
-    background: #ff510079;
+    height: 0.3rem;
+    background-color: #c0edff;
+    border: none;
     outline: none;
-    overflow: visible;
+}
+
+#zoom-slider::-webkit-slider-thumb {
+    cursor: pointer;
+    -webkit-appearance: none !important;
+    width: 4rem;
+    height: 4rem;
+    background-image: url('assets/images/saturn.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat
+
+}
+
+.zoom-button {
+    margin: 0.2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    transform: rotateZ(90deg);
+}
+
+.zoom-icon {
+    width: 2rem;
+    height: 2rem;
+    filter: brightness(0) invert(1);
 }
 
 body {
