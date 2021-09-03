@@ -1,10 +1,11 @@
 const root = document.querySelector(':root');
 const container = document.getElementById('background-stars');
 const zoomSlider = document.getElementById('zoom-slider');
-const solarSystem = document.getElementById('solar-system')
+const solarSystem = document.getElementById('solar-system');
 const playAnim = document.getElementById('play-button');
 const pauseAnim = document.getElementById('pause-button');
-const planets = document.querySelectorAll('.celestial-body-shared');
+const planets = document.querySelectorAll('.planet');
+const planetLabels = document.querySelectorAll('#planet-names div');
 
 const colors = ['#97e1ff', '#ffae80', '#6171ff'];
 const shadows = ['#c0edff', '#ffd4bb', '#c0c1ff'];
@@ -32,6 +33,15 @@ pauseAnim.addEventListener('click', () => {
     root.style.setProperty('--playState', 'paused');
     playAnim.classList.toggle('hide');
     pauseAnim.classList.toggle('hide');
+})
+
+planetLabels.forEach((label, i) => {
+    label.addEventListener('mouseover', () => {
+        planets[i].classList.add('planet-focus');
+    })
+    label.addEventListener('mouseout', () => {
+        planets[i].classList.remove('planet-focus');
+    })
 })
 
 

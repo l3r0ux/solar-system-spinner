@@ -10,6 +10,15 @@
     height: 100vh;
 }
 
+.planet-focus {
+    width: 5rem !important;
+    height: 5rem !important;
+}
+
+.planet {
+    transition: all 500ms ease;
+}
+
 .star {
     border-radius: 50%;
     position: absolute;
@@ -216,10 +225,10 @@ body {
     animation-play-state: var(--playState);
 }
 
-#star {
+#sun {
     transform: rotateX(-70deg);
-    width: 8rem;
-    height: 8rem;
+    width: 6rem;
+    height: 6rem;
     border-radius: 50%;
     background-color: #ff4500;
     box-shadow: 0 0 50px #ff4500;
