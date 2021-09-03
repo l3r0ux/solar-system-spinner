@@ -210,9 +210,14 @@ body {
 }
 
 #planet-names div {
+    border-right: 1px solid rgba(0, 238, 255, 0.753);
     cursor: pointer;
     transition: all ease 200ms;
-    margin: 0 0.5rem 0 0.5rem;
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+#planet-names div:last-of-type {
+    border: none;
 }
 
 #planet-names div:hover {
