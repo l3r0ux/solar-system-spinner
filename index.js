@@ -6,6 +6,7 @@ const playAnim = document.getElementById('play-button');
 const pauseAnim = document.getElementById('pause-button');
 const planets = document.querySelectorAll('.planet');
 const planetLabels = document.querySelectorAll('#planet-names div');
+const planetDetails = document.querySelectorAll('.planet-details');
 
 const colors = ['#97e1ff', '#ffae80', '#6171ff'];
 const shadows = ['#c0edff', '#ffd4bb', '#c0c1ff'];
@@ -38,15 +39,19 @@ pauseAnim.addEventListener('click', () => {
 planetLabels.forEach((label, i) => {
     label.addEventListener('mouseover', () => {
         if (planets[i].id.includes('sun')) {
+            planetDetails[i].classList.add('show');
             planets[i].classList.add('sun-focus');
         } else {
+            planetDetails[i].classList.add('show');
             planets[i].classList.add('planet-focus');
         }
     })
     label.addEventListener('mouseout', () => {
         if (planets[i].id.includes('sun')) {
+            planetDetails[i].classList.remove('show');
             planets[i].classList.remove('sun-focus');
         } else {
+            planetDetails[i].classList.remove('show');
             planets[i].classList.remove('planet-focus');
         }
     })

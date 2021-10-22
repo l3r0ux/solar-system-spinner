@@ -27,6 +27,54 @@
     transition: all 500ms ease;
 }
 
+.planet-details {
+    transition: all ease 500ms;
+    position: fixed;
+    z-index: 100;
+    color: white;
+    background-color: #ffffff4d;
+    box-shadow: 0 0 15px #ffffff4d;
+    padding: 1rem;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    position: fixed;
+    right: 0;
+    top: 15%;
+    transform: translateX(120%);
+}
+
+.planet-details ul {
+    list-style: none;
+    margin-left: 1rem;
+}
+
+.detail-label {
+    font-weight: bold;
+}
+
+.planet-details-img-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.planet-details-img {
+    width: 10rem;
+}
+
+.planet-details h1 {
+    margin-bottom: 1rem;
+}
+
+.planet-details div {
+    margin-bottom: 0.8rem;
+}
+
+.show {
+    transform: translateX(0);
+}
+
 .star {
     border-radius: 50%;
     position: absolute;
