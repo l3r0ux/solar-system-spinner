@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 #background-stars {
@@ -13,34 +14,43 @@
 .planet-focus {
     width: 5rem !important;
     height: 5rem !important;
-    box-shadow: 0 0 15px white;
+    -webkit-box-shadow: 0 0 15px white;
+            box-shadow: 0 0 15px white;
 }
 
 .sun-focus {
     width: 8rem !important;
     height: 8rem !important;
     background-color: transparent !important;
-    box-shadow: 0 0 15px white !important;
+    -webkit-box-shadow: 0 0 15px white !important;
+            box-shadow: 0 0 15px white !important;
 }
 
 .planet {
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
     transition: all 500ms ease;
 }
 
 .planet-details {
+    -webkit-transition: all ease 500ms;
+    -o-transition: all ease 500ms;
     transition: all ease 500ms;
     position: fixed;
     z-index: 100;
     color: white;
     background-color: #ffffff4d;
-    box-shadow: 0 0 15px #ffffff4d;
+    -webkit-box-shadow: 0 0 15px #ffffff4d;
+            box-shadow: 0 0 15px #ffffff4d;
     padding: 1rem;
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
     position: fixed;
     right: 0;
     top: 15%;
-    transform: translateX(120%);
+    -webkit-transform: translateX(120%);
+        -ms-transform: translateX(120%);
+            transform: translateX(120%);
 }
 
 .planet-details ul {
@@ -54,9 +64,15 @@
 
 .planet-details-img-container {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .planet-details-img {
@@ -72,7 +88,9 @@
 }
 
 .show {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
 }
 
 .star {
@@ -102,11 +120,16 @@
     z-index: 100;
     top: 1rem;
     right: 6rem;
-    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1);
 }
 
 #play-button {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
     transition: all 200ms ease;
     cursor: pointer;
     position: absolute;
@@ -118,7 +141,11 @@
 }
 
 #pause-button {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
     transition: all 200ms ease;
     cursor: pointer;
     position: absolute;
@@ -132,7 +159,9 @@
 .hide {
     z-index: 2 !important;
     opacity: 0 !important;
-    transform: translateX(5rem) !important;
+    -webkit-transform: translateX(5rem) !important;
+        -ms-transform: translateX(5rem) !important;
+            transform: translateX(5rem) !important;
     visibility: hidden !important;
 }
 
@@ -141,15 +170,26 @@
     z-index: 100;
     top: 12rem;
     left: -10rem;
-    transform: rotateZ(-90deg);
+    -webkit-transform: rotateZ(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotateZ(-90deg);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     height: 2.4rem;
     border-radius: 2.4rem;  
     background: #ffffff4d;
-    box-shadow: 0 0 15px #ffffff4d;
+    -webkit-box-shadow: 0 0 15px #ffffff4d;
+            box-shadow: 0 0 15px #ffffff4d;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #zoom-slider {
@@ -177,19 +217,28 @@
 .zoom-button {
     margin: 0.2rem;
     color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-size: 2rem;
     width: 2rem;
     height: 2rem;
-    transform: rotateZ(90deg);
+    -webkit-transform: rotateZ(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotateZ(90deg);
 }
 
 .zoom-icon {
     width: 2rem;
     height: 2rem;
-    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1);
 }
 
 @font-face {
@@ -199,75 +248,129 @@
 
 body {
     height: 100vh;
+    background-image: -o-radial-gradient(top left, circle, rgb(0, 43, 99), rgb(0, 21, 39), rgb(0, 11, 17));
     background-image: radial-gradient(circle at top left, rgb(0, 43, 99), rgb(0, 21, 39), rgb(0, 11, 17));
     overflow: hidden;
     font-family: Agelast;
 }
 
 #main {
-    transform: perspective(1000px);
+    -webkit-transform: perspective(1000px);
+            transform: perspective(1000px);
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #solar-system {
     position: fixed;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: -webkit-transform 200ms ease;
+    transition: -webkit-transform 200ms ease;
+    -o-transition: transform 200ms ease;
     transition: transform 200ms ease;
-    transform: scale(var(--zoom));
+    transition: transform 200ms ease, -webkit-transform 200ms ease;
+    -webkit-transform: scale(var(--zoom));
+        -ms-transform: scale(var(--zoom));
+            transform: scale(var(--zoom));
+    cursor: -webkit-grab;
     cursor: grab;
     z-index: 1;
 }
 
 #solar-system-container {
     position: fixed;
-    transform: rotateX(70deg) rotateY(-15deg);
-    transform-style: preserve-3d;
+    -webkit-transform: rotateX(70deg) rotateY(-15deg);
+            transform: rotateX(70deg) rotateY(-15deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .container-shared {
-    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    transform-origin: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
     border-radius: 50%;
-    animation-name: rotation-animation;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-play-state: var(--playState);
+    -webkit-animation-name: rotation-animation;
+            animation-name: rotation-animation;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-play-state: var(--playState);
+            animation-play-state: var(--playState);
 }
 
 #planet-names {
+    -webkit-transition: all ease 500ms;
+    -o-transition: all ease 500ms;
     transition: all ease 500ms;
     position: fixed;
     z-index: 100;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     bottom: 1rem;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     color: white;
     font-size: 1.5rem;
     height: 3rem;
     background-color: #ffffff4d;
-    box-shadow: 0 0 15px #ffffff4d;
+    -webkit-box-shadow: 0 0 15px #ffffff4d;
+            box-shadow: 0 0 15px #ffffff4d;
     border-radius: 2rem;
 }
 
 #planet-names div {
     border-right: 1px solid rgba(0, 238, 255, 0.753);
     cursor: pointer;
+    -webkit-transition: all ease 200ms;
+    -o-transition: all ease 200ms;
     transition: all ease 200ms;
     padding: 0 0.5rem 0 0.5rem;
 }
@@ -277,25 +380,34 @@ body {
 }
 
 #planet-names div:hover {
-    transform: translateY(-0.2rem);
-    filter: drop-shadow(0 0 5px white);
+    -webkit-transform: translateY(-0.2rem);
+        -ms-transform: translateY(-0.2rem);
+            transform: translateY(-0.2rem);
+    -webkit-filter: drop-shadow(0 0 5px white);
+            filter: drop-shadow(0 0 5px white);
 }
 
 .celestial-body-shared {
     border-radius: 50%;
-    animation-name: planet-correction-3d;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-play-state: var(--playState);
+    -webkit-animation-name: planet-correction-3d;
+            animation-name: planet-correction-3d;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-play-state: var(--playState);
+            animation-play-state: var(--playState);
 }
 
 #sun {
-    transform: rotateX(-70deg);
+    -webkit-transform: rotateX(-70deg);
+            transform: rotateX(-70deg);
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
     background-color: #ff4500;
-    box-shadow: 0 0 50px #ff4500;
+    -webkit-box-shadow: 0 0 50px #ff4500;
+            box-shadow: 0 0 50px #ff4500;
 }
 
 /* Mercury */
@@ -303,8 +415,10 @@ body {
     height: 12rem;
     width: 12rem;
     border: 1px solid #ffffff27;
-    animation-duration: 8s;
-    animation-delay: -5s;
+    -webkit-animation-duration: 8s;
+            animation-duration: 8s;
+    -webkit-animation-delay: -5s;
+            animation-delay: -5s;
 }
 
 #mercury {
@@ -312,8 +426,10 @@ body {
     z-index: 10;
     width: var(--mercury-size);
     height: var(--mercury-size);
-    animation-duration: 8s;
-    animation-delay: -5s;
+    -webkit-animation-duration: 8s;
+            animation-duration: 8s;
+    -webkit-animation-delay: -5s;
+            animation-delay: -5s;
 }
 
 /* Venus */
@@ -321,15 +437,19 @@ body {
     height: 17rem;
     width: 17rem;
     border: 1px solid #ffffff27;
-    animation-duration: 11s;
-    animation-delay: -2s;
+    -webkit-animation-duration: 11s;
+            animation-duration: 11s;
+    -webkit-animation-delay: -2s;
+            animation-delay: -2s;
 }
 
 #venus {
     width: var(--venus-size);
     height: var(--venus-size);
-    animation-duration: 11s;
-    animation-delay: -2s;
+    -webkit-animation-duration: 11s;
+            animation-duration: 11s;
+    -webkit-animation-delay: -2s;
+            animation-delay: -2s;
 }
 
 /* Earth */
@@ -337,18 +457,28 @@ body {
     height: 24rem;
     width: 24rem;
     border: 1px solid #ffffff27;
-    animation-duration: 14s;
-    animation-delay: -10s;
+    -webkit-animation-duration: 14s;
+            animation-duration: 14s;
+    -webkit-animation-delay: -10s;
+            animation-delay: -10s;
 }
 
 #earth {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: var(--earth-size);
     height: var(--earth-size);
-    animation-duration: 14s;
-    animation-delay: -10s;
+    -webkit-animation-duration: 14s;
+            animation-duration: 14s;
+    -webkit-animation-delay: -10s;
+            animation-delay: -10s;
     border-radius: 50%;
 }
 
@@ -356,13 +486,16 @@ body {
     height: 4rem;
     width: 4rem;
     border: 1px solid #ffffff27;
-    animation-duration: 5s;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
 }
 
 #moon {
     width: var(--moon-size);
     height: var(--moon-size);
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
 }
 
 /* Mars */
@@ -370,15 +503,19 @@ body {
     height: 31rem;
     width: 31rem;
     border: 1px solid #ffffff27;
-    animation-duration: 16s;
-    animation-delay: -1s;
+    -webkit-animation-duration: 16s;
+            animation-duration: 16s;
+    -webkit-animation-delay: -1s;
+            animation-delay: -1s;
 }
 
 #mars {
     width: var(--mars-size);
     height: var(--mars-size);
-    animation-duration: 16s;
-    animation-delay: -1s;
+    -webkit-animation-duration: 16s;
+            animation-duration: 16s;
+    -webkit-animation-delay: -1s;
+            animation-delay: -1s;
 }
 
 /* Juptier */
@@ -386,15 +523,19 @@ body {
     height: 38rem;
     width: 38rem;
     border: 1px solid #ffffff27;
-    animation-duration: 20s;
-    animation-delay: -18s;
+    -webkit-animation-duration: 20s;
+            animation-duration: 20s;
+    -webkit-animation-delay: -18s;
+            animation-delay: -18s;
 }
 
 #jupiter {
     width: var(--jupiter-size);
     height: var(--jupiter-size);
-    animation-duration: 20s;
-    animation-delay: -18s;
+    -webkit-animation-duration: 20s;
+            animation-duration: 20s;
+    -webkit-animation-delay: -18s;
+            animation-delay: -18s;
 }
 
 /* Saturn */
@@ -402,15 +543,19 @@ body {
     height: 46rem;
     width: 46rem;
     border: 1px solid #ffffff27;
-    animation-duration: 25s;
-    animation-delay: -15s;
+    -webkit-animation-duration: 25s;
+            animation-duration: 25s;
+    -webkit-animation-delay: -15s;
+            animation-delay: -15s;
 }
 
 #saturn {
     width: var(--saturn-size);
     height: var(--saturn-size);
-    animation-duration: 25s;
-    animation-delay: -15s;
+    -webkit-animation-duration: 25s;
+            animation-duration: 25s;
+    -webkit-animation-delay: -15s;
+            animation-delay: -15s;
 }
 
 /* Uranus */
@@ -418,15 +563,19 @@ body {
     height: 53rem;
     width: 53rem;
     border: 1px solid #ffffff27;
-    animation-duration: 34s;
-    animation-delay: -25s;
+    -webkit-animation-duration: 34s;
+            animation-duration: 34s;
+    -webkit-animation-delay: -25s;
+            animation-delay: -25s;
 }
 
 #uranus {
     width: var(--uranus-size);
     height: var(--uranus-size);
-    animation-duration: 34s;
-    animation-delay: -25s;
+    -webkit-animation-duration: 34s;
+            animation-duration: 34s;
+    -webkit-animation-delay: -25s;
+            animation-delay: -25s;
 }
 
 /* Neptune */
@@ -434,40 +583,85 @@ body {
     height: 60rem;
     width: 60rem;
     border: 1px solid #ffffff27;
-    animation-duration: 45s;
-    animation-delay: -10s;
+    -webkit-animation-duration: 45s;
+            animation-duration: 45s;
+    -webkit-animation-delay: -10s;
+            animation-delay: -10s;
 }
 
 #neptune {
     width: var(--neptune-size);
     height: var(--neptune-size);
-    animation-duration: 45s;
-    animation-delay: -10s;
+    -webkit-animation-duration: 45s;
+            animation-duration: 45s;
+    -webkit-animation-delay: -10s;
+            animation-delay: -10s;
+}
+
+@-webkit-keyframes rotation-animation {
+    from {
+        -webkit-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
+    }
+    to {
+        -webkit-transform: rotateZ(360deg);
+                transform: rotateZ(360deg);
+    }
 }
 
 @keyframes rotation-animation {
     from {
-        transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
     }
     to {
-        transform: rotateZ(360deg);
+        -webkit-transform: rotateZ(360deg);
+                transform: rotateZ(360deg);
+    }
+}
+
+@-webkit-keyframes planet-correction-3d {
+    0% {
+        -webkit-transform: rotateX(-70deg) rotateY(0) translateY(-20%) scale(0.7);
+                transform: rotateX(-70deg) rotateY(0) translateY(-20%) scale(0.7);
+    }
+    25% {
+        -webkit-transform: rotateX(-90deg) rotateY(90deg) translateX(50%);
+                transform: rotateX(-90deg) rotateY(90deg) translateX(50%);
+    }
+    50% {
+        -webkit-transform: rotateX(-90deg) rotateY(180deg) translateY(20%) scale(1.2);
+                transform: rotateX(-90deg) rotateY(180deg) translateY(20%) scale(1.2);
+    }
+    75% {
+        -webkit-transform: rotateX(-90deg) rotateY(270deg) translateX(-50%);
+                transform: rotateX(-90deg) rotateY(270deg) translateX(-50%);
+    }
+    100% {
+        -webkit-transform: rotateX(-70deg) rotateY(360deg) translateY(-20%) scale(0.7);
+                transform: rotateX(-70deg) rotateY(360deg) translateY(-20%) scale(0.7);
     }
 }
 
 @keyframes planet-correction-3d {
     0% {
-        transform: rotateX(-70deg) rotateY(0) translateY(-20%) scale(0.7);
+        -webkit-transform: rotateX(-70deg) rotateY(0) translateY(-20%) scale(0.7);
+                transform: rotateX(-70deg) rotateY(0) translateY(-20%) scale(0.7);
     }
     25% {
-        transform: rotateX(-90deg) rotateY(90deg) translateX(50%);
+        -webkit-transform: rotateX(-90deg) rotateY(90deg) translateX(50%);
+                transform: rotateX(-90deg) rotateY(90deg) translateX(50%);
     }
     50% {
-        transform: rotateX(-90deg) rotateY(180deg) translateY(20%) scale(1.2);
+        -webkit-transform: rotateX(-90deg) rotateY(180deg) translateY(20%) scale(1.2);
+                transform: rotateX(-90deg) rotateY(180deg) translateY(20%) scale(1.2);
     }
     75% {
-        transform: rotateX(-90deg) rotateY(270deg) translateX(-50%);
+        -webkit-transform: rotateX(-90deg) rotateY(270deg) translateX(-50%);
+                transform: rotateX(-90deg) rotateY(270deg) translateX(-50%);
     }
     100% {
-        transform: rotateX(-70deg) rotateY(360deg) translateY(-20%) scale(0.7);
+        -webkit-transform: rotateX(-70deg) rotateY(360deg) translateY(-20%) scale(0.7);
+                transform: rotateX(-70deg) rotateY(360deg) translateY(-20%) scale(0.7);
     }
 }
