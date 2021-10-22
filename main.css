@@ -13,6 +13,14 @@
 .planet-focus {
     width: 5rem !important;
     height: 5rem !important;
+    box-shadow: 0 0 15px white;
+}
+
+.sun-focus {
+    width: 8rem !important;
+    height: 8rem !important;
+    background-color: transparent !important;
+    box-shadow: 0 0 15px white !important;
 }
 
 .planet {
@@ -293,6 +301,7 @@ body {
     height: var(--earth-size);
     animation-duration: 14s;
     animation-delay: -10s;
+    border-radius: 50%;
 }
 
 #moon-container {

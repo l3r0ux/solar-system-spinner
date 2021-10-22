@@ -37,10 +37,18 @@ pauseAnim.addEventListener('click', () => {
 
 planetLabels.forEach((label, i) => {
     label.addEventListener('mouseover', () => {
-        planets[i].classList.add('planet-focus');
+        if (planets[i].id.includes('sun')) {
+            planets[i].classList.add('sun-focus');
+        } else {
+            planets[i].classList.add('planet-focus');
+        }
     })
     label.addEventListener('mouseout', () => {
-        planets[i].classList.remove('planet-focus');
+        if (planets[i].id.includes('sun')) {
+            planets[i].classList.remove('sun-focus');
+        } else {
+            planets[i].classList.remove('planet-focus');
+        }
     })
 })
 
